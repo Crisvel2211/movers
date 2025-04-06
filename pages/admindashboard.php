@@ -4,7 +4,7 @@ include '../layout/adminLayout.php';
 
 // Check if the user is logged in
 if (!isset($_SESSION['id'])) {
-    header('Location: http://localhost/movers/pages/login.php'); // Redirect to login page if not logged in
+    header('Location: https://logistic2.moverstaxi.com'); // Redirect to login page if not logged in
     exit();
 }
 

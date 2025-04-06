@@ -42,8 +42,10 @@ function adminLayout($children) {
                         <i class='bx bx-chevron-right chevron-icon transition-transform'></i>
                     </a>
                     <ul class="ml-4 hidden transition-all">
-                        <li><a href="bookdetails.php" class="block px-4 py-2 transition
-                        <?= ($currentPage == 'bookdetails.php') ? 'bg-blue-300 text-blue-800' : 'hover:bg-blue-100'; ?>">Order Details</a></li>
+                        <li><a href="orderDetails.php" class="block px-4 py-2 transition
+                        <?= ($currentPage == 'orderDetails.php') ? 'bg-blue-300 text-blue-800' : 'hover:bg-blue-100'; ?>">Order Details</a></li>
+                        <li><a href="shippingDetails.php" class="block px-4 py-2 transition
+                        <?= ($currentPage == 'shippingDetails.php') ? 'bg-blue-300 text-blue-800' : 'hover:bg-blue-100'; ?>">Shipping Details</a></li>
                         <li><a href="routes.php" class="block px-4 py-2 transition
                         <?= ($currentPage == 'routes.php') ? 'bg-blue-300 text-blue-800' : 'hover:bg-blue-100'; ?>">Carriers Selection</a></li>
                     </ul>
@@ -59,6 +61,8 @@ function adminLayout($children) {
                         <i class='bx bx-chevron-right chevron-icon transition-transform'></i>
                     </a>
                     <ul class="ml-4 hidden transition-all">
+                        <li><a href="routes.php" class="block px-4 py-2 transition
+                        <?= ($currentPage == 'routes.php') ? 'bg-blue-300 text-blue-800' : 'hover:bg-blue-100'; ?>">Routes</a></li>
                         <li><a href="tracking.php" class="block px-4 py-2 transition
                         <?= ($currentPage == 'tracking.php') ? 'bg-blue-300 text-blue-800' : 'hover:bg-blue-100'; ?>">GPS Tracking</a></li>
                     </ul>
@@ -74,10 +78,15 @@ function adminLayout($children) {
                         <i class='bx bx-chevron-right chevron-icon transition-transform'></i>
                     </a>
                     <ul class="ml-4 hidden transition-all">
-                        <li><a href="asset.php" class="block px-4 py-2 transition
-                        <?= ($currentPage == 'asset.php') ? 'bg-blue-300 text-blue-800' : 'hover:bg-blue-100'; ?>">Vehicles</a></li>
-                        <li><a href="consumable.php" class="block px-4 py-2 transition
-                        <?= ($currentPage == 'consumable.php') ? 'bg-blue-300 text-blue-800' : 'hover:bg-blue-100'; ?>">Consumable Asset</a></li>
+                            <li><a href="transport.php" class="block px-4 py-2 transition
+                            <?= ($currentPage == 'transport.php') ? 'bg-blue-300 text-blue-800' : 'hover:bg-blue-100'; ?>">Transport Assets</a></li>
+
+                            <li><a href="consumable.php" class="block px-4 py-2 transition
+                            <?= ($currentPage == 'consumable.php') ? 'bg-blue-300 text-blue-800' : 'hover:bg-blue-100'; ?>">Supplies & Inventory</a></li>
+
+                            <li><a href="land.php" class="block px-4 py-2 transition
+                            <?= ($currentPage == 'land.php') ? 'bg-blue-300 text-blue-800' : 'hover:bg-blue-100'; ?>">Real Estate Assets</a></li>
+
                     </ul>
                 </li>
 
@@ -117,7 +126,7 @@ function adminLayout($children) {
             <div id="profile-dropdown" class="hidden absolute right-0 mt-2 bg-white shadow-lg rounded-lg w-48">
                 <ul class="text-gray-700">
                     <li><a href="settings.html" class="block px-4 py-2"><i class="bx bxs-user"></i> Profile</a></li>
-                    <li><a href="index.php" class="block px-4 py-2"><i class="bx bxs-log-out-circle"></i> Logout</a></li>
+                    <li><a href="https://logistic2.moverstaxi.com" class="block px-4 py-2"><i class="bx bxs-log-out-circle"></i> Logout</a></li>
                 </ul>
             </div>
         </div>

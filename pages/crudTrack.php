@@ -2,31 +2,7 @@
 session_start();
 include '../layout/adminLayout.php';
 
-// Check if the user is logged in
-if (!isset($_SESSION['id'])) {
-    header('Location: http://localhost/movers/pages/login.php');
-    exit();
-}
 
-// Define access control for roles
-$role_permissions = [
-    'admin' => ['/movers/pages/crudTrack.php'],
-];
-
-// Get user role
-$user_role = strtolower($_SESSION['role_name'] ?? '');
-
-// Get the current script path
-$current_page = $_SERVER['SCRIPT_NAME'];
-
-// Check if the user has permission
-$allowed_pages = $role_permissions[$user_role] ?? [];
-
-if (!in_array($current_page, $allowed_pages)) {
-    session_destroy();
-    header('Location: http://localhost/movers/pages/login.php');
-    exit();
-}
 
 // HTML form with TailwindCSS & Toastify.js
 $dashboardContent = '
@@ -109,7 +85,7 @@ $dashboardContent = '
             // Delay execution by 2 seconds
             setTimeout(async () => {
                 try {
-                    let response = await fetch("http://localhost/movers/api/routeApi.php", {
+                    let response = await fetch("https://logistic2.moverstaxi.com/api/routeApi.php", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"

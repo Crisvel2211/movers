@@ -67,7 +67,7 @@ $role = strtolower(trim($user['role_name']));
 // Check if user is in Civil Registrar department
 if ($department === 'logistic2') {
     if ($role === 'admin') {
-        $redirectUrl = "admindashboard.php"; // Redirect to Admin folder
+        $redirectUrl = "pages/admindashboard.php"; // Redirect to Admin folder
     } elseif ($role === 'employee') {
         $redirectUrl = "employee/employee_dashboard.php"; // Redirect to Employee folder
     } 
